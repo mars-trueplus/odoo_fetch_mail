@@ -27,9 +27,11 @@
         # 'security/ir.model.access.csv',
         'views/views.xml',
         'views/templates.xml',
+        'data/data.xml',
     ],
     # only loaded in demonstration mode
     'qweb': [
         'static/src/xml/fetch_mail.xml',
-    ]
+    ],
+    'application': True,
 }

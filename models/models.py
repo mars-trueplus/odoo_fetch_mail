@@ -31,6 +31,7 @@ class MailCron(models.Model):
 
     name = fields.Char(string="Fetch Mail")
 
+    @api.multi
     def run_fetch_mail(self):
         self.env['ir.cron'].search(
             [('name', '=', 'Fetchmail Service')], limit=1).method_direct_trigger()
